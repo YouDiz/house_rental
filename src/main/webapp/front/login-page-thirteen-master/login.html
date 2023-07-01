@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./asset/iconfont/iconfont.css">
+    <script src="js/login.js" defer></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box-img">
+            <div class="img-bg img1"></div>
+            <div class="img-bg img2"></div>
+        </div>
+        <div class="box-form">
+            <div class="change-color newmimicry-protrusion">
+                <span class="iconfont icon-zhuti_o"></span>
+            </div>
+            <div class="logon">
+                <div class="title">
+                    <span>Welcome login</span>
+                    <span> 房屋租赁网</span>
+                    
+                </div>
+                
+                <div class="forms">
+                    <input type="text" placeholder="UserName" class="ipts newmimicry-protrusion">
+                    <input type="password" placeholder="Password" class="ipts newmimicry-protrusion">
+                    <button class="login-btn newmimicry-protrusion" onclick="validateAccount()">Login</button>
+                    <button class="login-btn newmimicry-protrusion" >sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const changeColor = document.querySelector('.change-color')
+    const img1 = document.querySelector('.img1')
+    const img2 = document.querySelector('.img2')
+    const root = document.documentElement;
+    const boxForm = document.querySelector('.box-form')
+    const body = document.body
+    let flag = 1
+    changeColor.addEventListener('click', function () {
+        if (flag) {
+            root.style.setProperty('--colour-bg-body', 'rgb(229, 216, 207)');
+            root.style.setProperty('--colour-bg-box', 'rgb(147,121,109)');
+            root.style.setProperty('--colour-btn', 'rgb(147,121,109)');
+            root.style.setProperty('--colour-box-shadow-top', 'rgb(160,134,121)');
+            root.style.setProperty('--colour-box-shadow-bottom', 'rgb(127,105,94)');
+            img1.style.opacity = '0'
+            img2.style.opacity = '1'
+            flag = 0
+        } else {
+            root.style.setProperty('--colour-bg-body', 'rgb(186, 212, 227)');
+            root.style.setProperty('--colour-bg-box', 'rgb(94, 126, 162)');
+            root.style.setProperty('--colour-btn', '#5e7ea2');
+            root.style.setProperty('--colour-box-shadow-top', '#4c6683');
+            root.style.setProperty('--colour-box-shadow-bottom', '#7096c1');
+            img1.style.opacity = '1'
+            img2.style.opacity = '0'
+            flag = 1
+        }
+    })
+</script>
+
+</html>
