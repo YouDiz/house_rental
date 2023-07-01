@@ -1,5 +1,7 @@
 package com.ssm.entity;
 
+import org.springframework.beans.BeanUtils;
+
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
