@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.ContractMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssm.entity.Contract">
+            <id property="cid" column="cid" jdbcType="BIGINT"/>
+            <result property="caddtime" column="caddtime" jdbcType="TIMESTAMP"/>
+            <result property="chid" column="chid" jdbcType="VARCHAR"/>
+            <result property="cdeposit" column="cdeposit" jdbcType="VARCHAR"/>
+            <result property="cprice" column="cprice" jdbcType="VARCHAR"/>
+            <result property="rid" column="rid" jdbcType="BIGINT"/>
+            <result property="oid" column="oid" jdbcType="BIGINT"/>
+            <result property="cnotes" column="cnotes" jdbcType="VARCHAR"/>
+            <result property="ifownerexamine" column="ifownerexamine" jdbcType="VARCHAR"/>
+            <result property="ifadminexamine" column="ifadminexamine" jdbcType="VARCHAR"/>
+            <result property="leasetime" column="leasetime" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cid,caddtime,chid,
+        cdeposit,cprice,rid,
+        oid,cnotes,ifownerexamine,
+        ifadminexamine,leasetime
+    </sql>
+</mapper>

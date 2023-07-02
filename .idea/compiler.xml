@@ -10,5 +10,8 @@
         <module name="house_rental" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="house" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.EvaluateMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssm.entity.Evaluate">
+            <id property="eid" column="eid" jdbcType="BIGINT"/>
+            <result property="eaddtime" column="eaddtime" jdbcType="TIMESTAMP"/>
+            <result property="oid" column="oid" jdbcType="BIGINT"/>
+            <result property="rid" column="rid" jdbcType="BIGINT"/>
+            <result property="econtent" column="econtent" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        eid,eaddtime,oid,
+        rid,econtent
+    </sql>
+</mapper>
