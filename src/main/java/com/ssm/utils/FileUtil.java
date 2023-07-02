@@ -1,25 +1,31 @@
 package com.ssm.utils;
 
-import java.io.*;
-
-/**
-* @author yangliyuan
-* @version 创建时间：2020年2月7日 下午8:01:14
-* 类说明 : 
-*/
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class FileUtil {
-	public static byte[] FileToByte(File file) throws IOException {
-		// 将数据转为流
-		@SuppressWarnings("resource")
-		InputStream content = new FileInputStream(file);
-		ByteArrayOutputStream swapStream = new ByteArrayOutputStream();
-		byte[] buff = new byte[100];
-		int rc = 0;
-		while ((rc = content.read(buff, 0, 100)) > 0) {
-			swapStream.write(buff, 0, rc);
+	/**
+	 * 将文件转换为字节数组
+	 *
+	 * @param file 文件对象
+	 * @return 字节数组
+	 * @throws IOException 如果文件不存在或读取文件时发生错误
+	 */
+	public static byte[] fileToByte(File file) throws IOException {
+		if (!file.exists()) {
+			throw new IOException("File does not exist: " + file.getAbsolutePath());
 		}
-		// 获得二进制数组
-		return swapStream.toByteArray();
+
+		try (FileInputStream fis = new FileInputStream(file);
+			 ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
+			byte[] buffer = new byte[1024];
+			int bytesRead;
+			while ((bytesRead = fis.read(buffer)) != -1) {
+				bos.write(buffer, 0, bytesRead);
+			}
+			return bos.toByteArray();
+		}
 	}
 }
