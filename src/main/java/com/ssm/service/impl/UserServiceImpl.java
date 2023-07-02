@@ -12,7 +12,7 @@ public class UserServiceImpl implements UserService {
     private UserRentMapper userRentMapper;
 
     @Override
-    public UserRentEntity selectByUserRentName(String rid) {
-        return null;
+    public UserRentEntity selectByUserRentName(String rname) {
+        return userRentMapper.selectByUserRentName(rname);
     }
 }

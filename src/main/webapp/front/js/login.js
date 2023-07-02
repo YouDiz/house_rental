@@ -1,5 +1,5 @@
 function validateAccount() {
-    var account = document.getEleme   ntById("account").value;
+    var account = document.getEleme  ; ntById("account").value;
     var password = document.getElementById("password").value;
   
     $.ajax({
