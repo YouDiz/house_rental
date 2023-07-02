@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.FileMapper">
+
+    <resultMap id="userRentMap" type="com.ssm.entity.UserRentEntity">
+        <!--@mbg.generated-->
+        <!--@Table file-->
+        <id column="rid" jdbcType="INTEGER" property="rid" />
+        <result column="rusername" jdbcType="VARCHAR" property="rusername" />
+        <result column="rpwd" jdbcType="VARCHAR" property="rpwd" />
+        <result column="rage" jdbcType="VARCHAR" property="rage" />
+        <result column="rsex" jdbcType="VARCHAR" property="rsex" />
+        <result column="rphonenum" jdbcType="VARCHAR" property="rphonenum" />
+        <result column="rmail" jdbcType="VARCHAR" property="rmail" />
+    </resultMap>
+    <sql id="User_Column_List">
+        <!--@mbg.generated-->
+        rid, rusermane, rpwd, rage, rsex, rphonenum, rmail
+    </sql>
+    <select id="selectByUserRentName" parameterType="java.lang.String" resultMap="userRentMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="User_Column_List" />
+        from rusername
+        where rid = #{rid,jdbcType=VARCHAR}
+    </select>
+</mapper>

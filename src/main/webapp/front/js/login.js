@@ -1,9 +1,9 @@
 function validateAccount() {
-    var account = document.getElementById("account").value;
+    var account = document.getEleme   ntById("account").value;
     var password = document.getElementById("password").value;
   
     $.ajax({
-      url: "/checkAccount", // 后台Controller处理的URL
+      url: "/user/login", // 后台Controller处理的URL
       type: "POST",
       data: {account: account, password: password}, // 发送的数据
       success: function(result) {
