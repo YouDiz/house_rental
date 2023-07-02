@@ -1,11 +1,15 @@
 package com.ssm.mapper;
 
 import com.ssm.entity.File;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**
-*   @anther  mt
-*   @creater 2020-08-15 9:24
+* @author ColinCheem
+* @description 针对表【file】的数据库操作Mapper
+* @createDate 2023-07-02 17:27:19
+* @Entity com.ssm.entity.File
 */
-public interface FileMapper {
-    File selectByPrimaryKey(Integer id);
+public interface FileMapper extends BaseMapper<File> {
+
+
 }

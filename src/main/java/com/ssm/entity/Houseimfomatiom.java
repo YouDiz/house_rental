@@ -1,9 +1,8 @@
 package com.ssm.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
@@ -18,85 +17,72 @@ public class Houseimfomatiom implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "hid", type = IdType.AUTO)
+    @TableId
     private Long hid;
 
     /**
      * 创建时间
      */
-    @TableField(value = "haddtime")
     private Date haddtime;
 
     /**
      * 房屋编号
      */
-    @TableField(value = "hhousenum")
     private String hhousenum;
 
     /**
      * 标题
      */
-    @TableField(value = "htitle")
     private String htitle;
 
     /**
      * 房型
      */
-    @TableField(value = "hhousetype")
     private String hhousetype;
 
     /**
      * 图片
      */
-    @TableField(value = "hpicture")
     private String hpicture;
 
     /**
      * 地址
      */
-    @TableField(value = "haddress")
     private String haddress;
 
     /**
      * 出租定金
      */
-    @TableField(value = "hdeposit")
     private String hdeposit;
 
     /**
      * 出租价格
      */
-    @TableField(value = "hprice")
     private String hprice;
 
     /**
      * 房屋基本信息
      */
-    @TableField(value = "himformation")
     private String himformation;
 
     /**
      * 房屋面积
      */
-    @TableField(value = "hhousearea")
     private String hhousearea;
 
     /**
      * 房屋楼层
      */
-    @TableField(value = "hhousefloor")
     private String hhousefloor;
 
     /**
      * 房屋朝向
      */
-    @TableField(value = "hhousedirection")
     private String hhousedirection;
 
     /**
      * 
      */
-    @TableField(value = "oid")
     private Long oid;
 
     @TableField(exist = false)

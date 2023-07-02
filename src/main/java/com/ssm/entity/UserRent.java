@@ -1,9 +1,8 @@
 package com.ssm.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -17,43 +16,37 @@ public class UserRent implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "rid", type = IdType.AUTO)
+    @TableId
     private Long rid;
 
     /**
      * 用户名
      */
-    @TableField(value = "rusername")
     private String rusername;
 
     /**
      * 密码
      */
-    @TableField(value = "rpwd")
     private String rpwd;
 
     /**
      * 年龄
      */
-    @TableField(value = "rage")
     private String rage;
 
     /**
      * 性别
      */
-    @TableField(value = "rsex")
     private String rsex;
 
     /**
      * 手机
      */
-    @TableField(value = "rphonenum")
     private String rphonenum;
 
     /**
      * 邮箱
      */
-    @TableField(value = "rmail")
     private String rmail;
 
     @TableField(exist = false)

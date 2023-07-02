@@ -1,6 +1,6 @@
 package com.ssm.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.ssm.entity.UserOwner;
 import com.ssm.service.UserOwnerService;
 import com.ssm.mapper.UserOwnerMapper;
@@ -11,11 +11,11 @@ import javax.annotation.Resource;
 /**
 * @author ColinCheem
 * @description 针对表【user_owner(用户)】的数据库操作Service实现
-* @createDate 2023-07-02 16:01:54
+* @createDate 2023-07-02 17:27:27
 */
 @Service
 public class UserOwnerServiceImpl extends ServiceImpl<UserOwnerMapper, UserOwner>
-    implements UserOwnerService{
+implements UserOwnerService{
 
     @Resource
     private UserOwnerMapper userMapper;
@@ -34,7 +34,3 @@ public class UserOwnerServiceImpl extends ServiceImpl<UserOwnerMapper, UserOwner
     }
 
 }
-
-
-
-

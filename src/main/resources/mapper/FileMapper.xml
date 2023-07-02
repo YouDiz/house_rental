@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.mapper.FileMapper">
-  <resultMap id="BaseResultMap" type="com.ssm.entity.File">
-    <!--@mbg.generated-->
-    <!--@Table file-->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="filename" jdbcType="VARCHAR" property="filename" />
-    <result column="fileurl" jdbcType="VARCHAR" property="fileurl" />
-    <result column="isdel" jdbcType="INTEGER" property="isdel" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    id, filename, fileurl, isdel
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from file
-    where id = #{id,jdbcType=INTEGER}
-  </select>
+
+    <resultMap id="BaseResultMap" type="com.ssm.entity.File">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="filename" column="filename" jdbcType="VARCHAR"/>
+            <result property="fileurl" column="fileurl" jdbcType="VARCHAR"/>
+            <result property="isdel" column="isdel" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,filename,fileurl,
+        isdel
+    </sql>
 </mapper>

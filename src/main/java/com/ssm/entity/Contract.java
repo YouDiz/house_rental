@@ -1,9 +1,8 @@
 package com.ssm.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
@@ -18,67 +17,57 @@ public class Contract implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "cid", type = IdType.AUTO)
+    @TableId
     private Long cid;
 
     /**
      * 创建时间
      */
-    @TableField(value = "caddtime")
     private Date caddtime;
 
     /**
      * 房屋编号
      */
-    @TableField(value = "chid")
     private String chid;
 
     /**
      * 出租定金
      */
-    @TableField(value = "cdeposit")
     private String cdeposit;
 
     /**
      * 出租价格
      */
-    @TableField(value = "cprice")
     private String cprice;
 
     /**
      * 租客id
      */
-    @TableField(value = "rid")
     private Long rid;
 
     /**
      * 房东id
      */
-    @TableField(value = "oid")
     private Long oid;
 
     /**
      * 备注
      */
-    @TableField(value = "cnotes")
     private String cnotes;
 
     /**
      * 
      */
-    @TableField(value = "ifownerexamine")
     private String ifownerexamine;
 
     /**
      * 
      */
-    @TableField(value = "ifadminexamine")
     private String ifadminexamine;
 
     /**
      * 租借月份
      */
-    @TableField(value = "leasetime")
     private Integer leasetime;
 
     @TableField(exist = false)

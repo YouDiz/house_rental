@@ -1,9 +1,8 @@
 package com.ssm.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
@@ -18,31 +17,27 @@ public class News implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "nid", type = IdType.AUTO)
+    @TableId
     private Long nid;
 
     /**
      * 创建时间
      */
-    @TableField(value = "naddtime")
     private Date naddtime;
 
     /**
      * 标题
      */
-    @TableField(value = "ntitle")
     private String ntitle;
 
     /**
      * 图片
      */
-    @TableField(value = "npicture")
     private String npicture;
 
     /**
      * 内容
      */
-    @TableField(value = "ncontent")
     private String ncontent;
 
     @TableField(exist = false)
