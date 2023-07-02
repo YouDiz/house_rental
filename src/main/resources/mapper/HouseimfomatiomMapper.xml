@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.HouseimfomatiomMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssm.entity.Houseimfomatiom">
+            <id property="hid" column="hid" jdbcType="BIGINT"/>
+            <result property="haddtime" column="haddtime" jdbcType="TIMESTAMP"/>
+            <result property="hhousenum" column="hhousenum" jdbcType="VARCHAR"/>
+            <result property="htitle" column="htitle" jdbcType="VARCHAR"/>
+            <result property="hhousetype" column="hhousetype" jdbcType="VARCHAR"/>
+            <result property="hpicture" column="hpicture" jdbcType="VARCHAR"/>
+            <result property="haddress" column="haddress" jdbcType="VARCHAR"/>
+            <result property="hdeposit" column="hdeposit" jdbcType="VARCHAR"/>
+            <result property="hprice" column="hprice" jdbcType="VARCHAR"/>
+            <result property="himformation" column="himformation" jdbcType="VARCHAR"/>
+            <result property="hhousearea" column="hhousearea" jdbcType="VARCHAR"/>
+            <result property="hhousefloor" column="hhousefloor" jdbcType="VARCHAR"/>
+            <result property="hhousedirection" column="hhousedirection" jdbcType="VARCHAR"/>
+            <result property="oid" column="oid" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        hid,haddtime,hhousenum,
+        htitle,hhousetype,hpicture,
+        haddress,hdeposit,hprice,
+        himformation,hhousearea,hhousefloor,
+        hhousedirection,oid
+    </sql>
+</mapper>

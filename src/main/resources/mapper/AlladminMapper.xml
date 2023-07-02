@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.AlladminMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssm.entity.Alladmin">
+            <id property="aaid" column="aaid" jdbcType="BIGINT"/>
+            <result property="aaname" column="aaname" jdbcType="VARCHAR"/>
+            <result property="aapwd" column="aapwd" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        aaid,aaname,aapwd
+    </sql>
+</mapper>

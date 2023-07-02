@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.UserOwnerMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssm.entity.UserOwner">
+            <id property="oid" column="oid" jdbcType="BIGINT"/>
+            <result property="oname" column="oname" jdbcType="VARCHAR"/>
+            <result property="opwd" column="opwd" jdbcType="VARCHAR"/>
+            <result property="oage" column="oage" jdbcType="VARCHAR"/>
+            <result property="osex" column="osex" jdbcType="VARCHAR"/>
+            <result property="ophonenum" column="ophonenum" jdbcType="VARCHAR"/>
+            <result property="omail" column="omail" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        oid,oname,opwd,
+        oage,osex,ophonenum,
+        omail
+    </sql>
+</mapper>
