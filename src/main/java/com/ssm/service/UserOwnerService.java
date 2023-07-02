@@ -9,5 +9,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2023-07-02 16:01:54
 */
 public interface UserOwnerService extends IService<UserOwner> {
-
+    UserOwner findOne(UserOwner user);
+    //用户注册
+    int addOne(UserOwner user);
+    UserOwner checkReg(String username);
 }

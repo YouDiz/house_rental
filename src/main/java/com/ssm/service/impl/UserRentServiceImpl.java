@@ -6,6 +6,8 @@ import com.ssm.service.UserRentService;
 import com.ssm.mapper.UserRentMapper;
 import org.springframework.stereotype.Service;
 
+import java.security.acl.Owner;
+
 /**
 * @author ColinCheem
 * @description 针对表【user_rent(用户)】的数据库操作Service实现
@@ -14,6 +16,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserRentServiceImpl extends ServiceImpl<UserRentMapper, UserRent>
     implements UserRentService{
+
+
 
 }
 

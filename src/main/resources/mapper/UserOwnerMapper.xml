@@ -19,4 +19,15 @@
         oage,osex,ophonenum,
         omail
     </sql>
+    <select id="findOne" parameterType="UserOwner" resultType="UserOwner">
+        SELECT * FROM user-owner where oname=#{oname} and opwd=#{0pwd}
+    </select>
+    <insert id="addOne" parameterType="UserOwner" >
+        insert into user-owner(oname,opwd) values(#{oname},#{opwd})
+    </insert>
+    <select id="checkReg" resultType="UserOwner">
+        select * from user-owner where oname=#{oname}
+    </select>
+
+
 </mapper>
