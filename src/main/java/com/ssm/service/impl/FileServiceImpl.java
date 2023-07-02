@@ -1,20 +1,18 @@
 package com.ssm.service.impl;
 
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
-import com.ssm.mapper.FileMapper;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.ssm.entity.File;
 import com.ssm.service.FileService;
+import com.ssm.mapper.FileMapper;
+import org.springframework.stereotype.Service;
+
 /**
-*   @anther  mt
-*   @creater 2020-08-15 9:24
+* @author ColinCheem
+* @description 针对表【file】的数据库操作Service实现
+* @createDate 2023-07-02 17:27:19
 */
 @Service
-public class FileServiceImpl implements FileService{
-    @Resource
-    private FileMapper fileMapper;
-    @Override
-    public File selectByPrimaryKey(Integer id) {
-        return fileMapper.selectByPrimaryKey(id);
-    }
+public class FileServiceImpl extends ServiceImpl<FileMapper, File>
+implements FileService{
+
 }

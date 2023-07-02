@@ -1,9 +1,8 @@
 package com.ssm.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
@@ -18,31 +17,27 @@ public class Evaluate implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "eid", type = IdType.AUTO)
+    @TableId
     private Long eid;
 
     /**
      * 创建时间
      */
-    @TableField(value = "eaddtime")
     private Date eaddtime;
 
     /**
      * 房东
      */
-    @TableField(value = "oid")
     private Long oid;
 
     /**
      * 租户
      */
-    @TableField(value = "rid")
     private Long rid;
 
     /**
      * 内容
      */
-    @TableField(value = "econtent")
     private String econtent;
 
     @TableField(exist = false)

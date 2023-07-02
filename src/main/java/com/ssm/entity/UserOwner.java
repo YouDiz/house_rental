@@ -1,9 +1,8 @@
 package com.ssm.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -17,43 +16,37 @@ public class UserOwner implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "oid")
+    @TableId
     private Long oid;
 
     /**
      * 用户名
      */
-    @TableField(value = "oname")
     private String oname;
 
     /**
      * 密码
      */
-    @TableField(value = "opwd")
     private String opwd;
 
     /**
      * 年龄
      */
-    @TableField(value = "oage")
     private String oage;
 
     /**
      * 性别
      */
-    @TableField(value = "osex")
     private String osex;
 
     /**
      * 手机
      */
-    @TableField(value = "ophonenum")
     private String ophonenum;
 
     /**
      * 邮箱
      */
-    @TableField(value = "omail")
     private String omail;
 
     @TableField(exist = false)

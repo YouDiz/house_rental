@@ -5,7 +5,7 @@
       <TemplateContext>
         <option name="generateConfig">
           <GenerateConfig>
-            <option name="annotationType" value="MYBATIS_PLUS3" />
+            <option name="annotationType" value="MYBATIS_PLUS2" />
             <option name="basePackage" value="com.ssm" />
             <option name="basePath" value="src/main/java" />
             <option name="classNameStrategy" value="camel" />
@@ -74,7 +74,7 @@
                 </TableUIInfo>
               </list>
             </option>
-            <option name="templatesName" value="mybatis-plus3" />
+            <option name="templatesName" value="mybatis-plus2" />
             <option name="useActualColumnAnnotationInject" value="true" />
             <option name="useActualColumns" value="true" />
             <option name="useLombokPlugin" value="true" />
@@ -82,7 +82,7 @@
         </option>
         <option name="moduleName" value="house_rental" />
         <option name="projectPath" value="$PROJECT_DIR$" />
-        <option name="templateName" value="mybatis-plus3" />
+        <option name="templateName" value="mybatis-plus2" />
       </TemplateContext>
     </option>
   </component>

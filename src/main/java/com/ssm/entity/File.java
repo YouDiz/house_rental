@@ -1,59 +1,83 @@
 package com.ssm.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import java.io.Serializable;
+import lombok.Data;
+
 /**
-*   @anther  mt
-*   @creater 2020-08-15 9:24
-*/
-public class File {
+ * 
+ * @TableName file
+ */
+@TableName(value ="file")
+@Data
+public class File implements Serializable {
     /**
-    * 上传的文件
-    */
+     * 
+     */
+    @TableId
     private Integer id;
 
     /**
-    * 文件名称
-    */
+     * 
+     */
     private String filename;
 
     /**
-    * 文件地址
-    */
+     * 
+     */
     private String fileurl;
 
     /**
-    * 是否删除（0否 1是）
-    */
+     * 
+     */
     private Integer isdel;
 
-    public Integer getId() {
-        return id;
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
+
+    @Override
+    public boolean equals(Object that) {
+        if (this == that) {
+            return true;
+        }
+        if (that == null) {
+            return false;
+        }
+        if (getClass() != that.getClass()) {
+            return false;
+        }
+        File other = (File) that;
+        return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
+            && (this.getFilename() == null ? other.getFilename() == null : this.getFilename().equals(other.getFilename()))
+            && (this.getFileurl() == null ? other.getFileurl() == null : this.getFileurl().equals(other.getFileurl()))
+            && (this.getIsdel() == null ? other.getIsdel() == null : this.getIsdel().equals(other.getIsdel()));
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
+        result = prime * result + ((getFilename() == null) ? 0 : getFilename().hashCode());
+        result = prime * result + ((getFileurl() == null) ? 0 : getFileurl().hashCode());
+        result = prime * result + ((getIsdel() == null) ? 0 : getIsdel().hashCode());
+        return result;
     }
 
-    public String getFilename() {
-        return filename;
-    }
-
-    public void setFilename(String filename) {
-        this.filename = filename;
-    }
-
-    public String getFileurl() {
-        return fileurl;
-    }
-
-    public void setFileurl(String fileurl) {
-        this.fileurl = fileurl;
-    }
-
-    public Integer getIsdel() {
-        return isdel;
-    }
-
-    public void setIsdel(Integer isdel) {
-        this.isdel = isdel;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", id=").append(id);
+        sb.append(", filename=").append(filename);
+        sb.append(", fileurl=").append(fileurl);
+        sb.append(", isdel=").append(isdel);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
     }
 }

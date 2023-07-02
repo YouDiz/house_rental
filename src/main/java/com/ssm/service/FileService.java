@@ -1,12 +1,14 @@
 package com.ssm.service;
 
 import com.ssm.entity.File;
-    /**
-*   @anther  mt
-*   @creater 2020-08-15 9:24
+import com.baomidou.mybatisplus.service.IService;
+
+/**
+* @author ColinCheem
+* @description 针对表【file】的数据库操作Service
+* @createDate 2023-07-02 17:27:19
 */
-public interface FileService{
+public interface FileService extends IService<File> {
 
-    File selectByPrimaryKey(Integer id);
-
+    File selectByPrimaryKey(String rname);
 }
